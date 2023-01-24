@@ -30,6 +30,7 @@
 	font-size: 27px;
 	margin-bottom: 20px;
 	font-weight: 300;
+	cursor: pointer;
 }
 
 .company-content {
@@ -44,7 +45,7 @@
 
 .company-name {
 	background-color: #dfdfde;
-	width: 8%;
+	width: 15%;
 	text-align: center;
 	border-radius: 8px;
 	padding: 7px 5px;
@@ -63,4 +64,16 @@
 
 .job-title {
 	font-weight: 500;
+}
+
+.job-name {
+	transition: all 0.5s;
+}
+
+.job-name:hover {
+	color: #9ba4b4;
+}
+
+.active {
+	color: #9ba4b4;
 }

@@ -1,35 +1,45 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import './App.css';
-import { AiFillCaretRight } from "react-icons/ai"
+import { AiFillCaretRight } from "react-icons/ai";
 
+const url = "https://course-api.com/react-tabs-project";
 function App() {
-  const url = "https://course-api.com/react-tabs-project";
+  const [jobs, setJobs] = useState([]);
+  const [value, setValue] = useState(0);
 
+  const fetchJobs = async () => {
+    const response = await fetch(url);
+    const newJob = await response.json();
+    setJobs(newJob);
+  }
+
+  useEffect(() => {
+    fetchJobs();
+  }, [])
+
+  // console.log(jobs[value]?.title)
+  const { company, dates, duties, title } = jobs[value] || ''
   return (
     <section className="container">
       <h1 className="title">Experience</h1>
       <div className="job">
         <div className="company-tab">
-          <h4>John</h4>
-          <h4>Smith</h4>
-          <h4>Tom</h4>
+          {jobs && jobs.map((job, index) => {
+            return (
+              <h4 key={job.id} onClick={() => setValue(index)} className={`job-name ${index === value && 'active'}`} >{job.company}</h4>
+            )
+          })}
         </div>
         <div className="company-content">
-          <h2 className="job-title">Full Stack Web Developer</h2>
-          <p className="company-name">John</p>
-          <p className="date">December 2015 - Present</p>
-          <div className="text">
-            <AiFillCaretRight />
-            <p>Tote bag sartorial mlkshk air plant vinyl banjo lumbersexual poke leggings offal cold-pressed brunch neutra. Hammock photo booth live-edge disrupt.</p>
-          </div>
-          <div className="text">
-            <AiFillCaretRight />
-            <p>Post-ironic selvage chambray sartorial freegan meditation. Chambray chartreuse kombucha meditation, man bun four dollar toast street art cloud bread live-edge heirloom.</p>
-          </div>
-          <div className="text">
-            <AiFillCaretRight />
-            <p>Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.</p>
-          </div>
+          <h2 className="job-title">{title}</h2>
+          <p className="company-name">{company}</p>
+          <p className="date">{dates}</p>
+          {duties && duties.map((duty, index) => (
+            <div className="text" key={index}>
+              <AiFillCaretRight />
+              <p>{duty}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
