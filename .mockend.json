@@ -1,38 +1,49 @@
-[
-  {
-    id: 1,
-    name: 'susan smith',
-    job: 'web developer',
-    image:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
-    text:
-      "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
-  },
-  {
-    id: 2,
-    name: 'anna johnson',
-    job: 'web designer',
-    image:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg',
-    text:
-      'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
-  },
-  {
-    id: 3,
-    name: 'peter jones',
-    job: 'intern',
-    image:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
-    text:
-      'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
-  },
-  {
-    id: 4,
-    name: 'bill anderson',
-    job: 'the boss',
-    image:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg',
-    text:
-      'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
-  },
-];
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "AMA Cafe",
+      "location": "MKT, Majnu ka Tila , New Delhi",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "description": "Popular Dishes, Pancakes and Maple Syrup, Pancake Breakfast, Choco Walnut Brownie, Banana Muffin, Apple Cinnamon Cake, Coffee Espresso",
+      "schedule": "Opens at 9am",
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "title": "Millie's Espresso",
+      "location": "Building 5/3, jamyan gunii st 1st floor, Ulaanbaatar",
+      "image": "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+      "description": "Popular Dishes Appam, Tacos, Fish Curry, Coffee, Drinks, Chicken",
+      "schedule": "Opens at 9am",
+      "rating": 5.2
+    },
+    {
+      "id": 3,
+      "title": "#Hashtag cheese & beer Broadway",
+      "location": "WW84+3RG, Ulaanbaatar",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "description": "People Say This Place Is Known For Best in Service, Clean and Hygienic Place, Nice Concept, Served Quickly, Healthy and Delicious, Fresh Food with Good Quality",
+      "schedule": "Opens at 10am",
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "title": "Smokehouse",
+      "location": "Sukhbaatar District, 1-r Khoroo, Olympic Street 5, DB Building, Ulaanbaatar 14220",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "description": "People Say This Place Is Known For Comforting Atmosphere, Host, View, Hospitality, Crowd, Great Service",
+      "schedule": "Opens at 10am",
+      "rating": 3.9
+    },
+    {
+      "id": 5,
+      "title": "Redbull Restaurant",
+      "location": "United Nation's street, Ulaanbaatar 15141",
+      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "description": "People Say This Place Is Known For Comforting Atmosphere, Host, View, Hospitality, Crowd, Great Service",
+      "schedule": "Opens at 11am",
+      "rating": 4.2
+    }
+  ]
+}
