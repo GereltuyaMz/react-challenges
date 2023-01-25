@@ -1,49 +1,66 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "AMA Cafe",
-      "location": "MKT, Majnu ka Tila , New Delhi",
-      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "description": "Popular Dishes, Pancakes and Maple Syrup, Pancake Breakfast, Choco Walnut Brownie, Banana Muffin, Apple Cinnamon Cake, Coffee Espresso",
-      "schedule": "Opens at 9am",
-      "rating": 4.7
+  "Post": {
+    "_": {
+      "items": 10
     },
-    {
-      "id": 2,
-      "title": "Millie's Espresso",
-      "location": "Building 5/3, jamyan gunii st 1st floor, Ulaanbaatar",
-      "image": "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-      "description": "Popular Dishes Appam, Tacos, Fish Curry, Coffee, Drinks, Chicken",
-      "schedule": "Opens at 9am",
-      "rating": 5.2
+    "cover": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
     },
-    {
-      "id": 3,
-      "title": "#Hashtag cheese & beer Broadway",
-      "location": "WW84+3RG, Ulaanbaatar",
-      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-      "description": "People Say This Place Is Known For Best in Service, Clean and Hygienic Place, Nice Concept, Served Quickly, Healthy and Delicious, Fresh Food with Good Quality",
-      "schedule": "Opens at 10am",
-      "rating": 4
+    "title": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
+      }
     },
-    {
-      "id": 4,
-      "title": "Smokehouse",
-      "location": "Sukhbaatar District, 1-r Khoroo, Olympic Street 5, DB Building, Ulaanbaatar 14220",
-      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "description": "People Say This Place Is Known For Comforting Atmosphere, Host, View, Hospitality, Crowd, Great Service",
-      "schedule": "Opens at 10am",
-      "rating": 3.9
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
     },
-    {
-      "id": 5,
-      "title": "Redbull Restaurant",
-      "location": "United Nation's street, Ulaanbaatar 15141",
-      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "description": "People Say This Place Is Known For Comforting Atmosphere, Host, View, Hospitality, Crowd, Great Service",
-      "schedule": "Opens at 11am",
-      "rating": 4.2
+    "category": {
+      "string": ["one", "two", "three"]
+    },
+    "isDraft": {
+      "boolean": {}
+    },
+    "views": {
+      "int": {
+        "min": 0,
+        "max": 1000
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "comments": {
+      "hasMany": "Comment"
     }
-  ]
+  },
+  "Comment": {
+    "_": {
+      "items": 25
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
